@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iCreditWorks Login</title>
+    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Login Form Section -->
+        <section class="login-form">
+            <div class="login-card">
+                <img src="assets/images/icreditworks-logo.png" alt="iCreditWorks Logo" class="logo">
+                <h2>User Login</h2>
+                <form>
+                     <div class="input-box">
+                        <input type="email" id="email" placeholder="Business Email ID" required>
+                    </div>
+
+                    <div class="input-box password-wrapper">
+                        <input type="password" id="password" placeholder="Password" required>
+                        <span class="toggle-password" onclick="togglePasswordVisibility()">
+                            <i class="fas fa-eye" id="eye-icon"></i>
+                        </span>
+                    </div>
+                    
+                    <div class="remember">
+                        <input type="checkbox" id="remember-me">
+                        <label for="remember-me">Remember me</label>
+                    </div>
+
+                    <button type="submit" class="btn">Login</button>
+                    <a href="#" class="forgot-password">Don’t remember your password?</a>
+                </form>
+            </div>
+        </section>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>The smartest way for your patients to pay for their smiles.</h1>
+                <p>Introducing a remarkable set of new features that simplify and accelerate everyday tasks performed in the Portal.</p>
+            </div>
+            <img src="assets/images/portal-screen.png" alt="Provider Portal" class="hero-image">
+        </section>
+    </div>
+
+       <script>
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('password');
+            const eyeIcon = document.getElementById('eye-icon');
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+
+            // Toggle Font Awesome eye icon
+            eyeIcon.classList.toggle('fa-eye');
+            eyeIcon.classList.toggle('fa-eye-slash');
+        }
+    </script>
+</body>
+</html>
